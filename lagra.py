@@ -78,9 +78,6 @@ def try_again():
             chosen_option = input("Option: ")
     return
 
-def logout():
-    return 
-
 def add_to_list(ls, item):
     ls.append(item)
     return
