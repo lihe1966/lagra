@@ -1,8 +1,14 @@
 user_password_dic = {
-    "eva":"lösen123"
+    "eva":"lösen123",
+    "sven":"sten100",
+    "kalle":"anka",
+    "lisa":"ethernet"
     }
 user_items_dic = {
-    "eva":["banan", "blåbär", "hallon"]
+    "eva":["banan", "blåbär", "hallon"],
+    "sven":["granit", "marmor", "kalksten"],
+    "kalle":["mussepigg", "farbroranka"],
+    "lisa":["tangentbord", "mus", "skärm"]
     }
 
 def start_page():
@@ -77,9 +83,6 @@ def logout():
 
 def add_to_list(ls, item):
     ls.append(item)
-    return
-
-def escape():
     return
 
 def main():
