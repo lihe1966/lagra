@@ -11,8 +11,11 @@ user_items_dic = {
     "lisa":["tangentbord", "mus", "skärm"]
     }
 
+def splash():
+    print("Welcome to Lagra (TM) \n")
+    return
+
 def start_page():
-    print("Welcome to Lagra\n")
     print("l) Log in" + "\n" + "q) Quit" +"\n")
     chosen_option = input("Option: ")
     if chosen_option == "l":
@@ -21,9 +24,14 @@ def start_page():
         print("Program shutting down.")
         exit()
     else:
-        while not chosen_option == "l" or chosen_option =="q":
+        while not chosen_option == "l" and not chosen_option == "q":
             print("Please enter valid option.")
             chosen_option = input("Option: ")
+        if chosen_option == "l":
+            login()
+        elif chosen_option == "q":
+            print("Program shutting down.")
+            exit()  
     return
 
 def item_page(username): 
@@ -33,7 +41,7 @@ def item_page(username):
     for i in item_list:
         print (f"{item_count}) {i}")
         item_count += 1
-    options(username)
+    item_page_options(username)
 
 def login():
     username = input("Username: ")
@@ -52,7 +60,7 @@ def authentication(username, password):
         try_again()
         return
     
-def options(username):
+def item_page_options(username):
     print ("\n Select an action. \n \n a) Add item \n l) List items \n q) Log out")
     chosen_option = input("Option: ")
     if chosen_option == "a":
@@ -83,7 +91,5 @@ def add_to_list(ls, item):
     return
 
 def main():
+    splash()
     start_page()
-    
-#main()
-
